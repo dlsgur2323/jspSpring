@@ -12,13 +12,14 @@ import javax.servlet.http.HttpServletResponse;
 import com.jsp.dto.MemberVO;
 import com.jsp.service.MemberService;
 import com.jsp.service.MemberServiceImpl;
+import com.jsp.utils.ViewResolver;
 
 @WebServlet("/member/detail")
 public class MemberDetailServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
        
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		String url="/WEB-INF/views/member/detail.jsp";
+		String url="/member/detail";
 		
 		String id= request.getParameter("id");
 		MemberService service = MemberServiceImpl.getInstance();
@@ -28,7 +29,8 @@ public class MemberDetailServlet extends HttpServlet {
 		} catch (SQLException e) {
 			// TODO: handle exception
 		}
-		request.getRequestDispatcher(url).forward(request, response);
+		
+		ViewResolver.view(url, request, response);
 	}
 
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {

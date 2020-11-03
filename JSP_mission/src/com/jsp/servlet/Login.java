@@ -12,19 +12,20 @@ import javax.servlet.http.HttpServletResponse;
 import com.jsp.dto.MemberVO;
 import com.jsp.service.MemberService;
 import com.jsp.service.MemberServiceImpl;
+import com.jsp.utils.ViewResolver;
 
 @WebServlet("/common/login")
 public class Login extends HttpServlet {
 	private static final long serialVersionUID = 1L;
        
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		String url = "/WEB-INF/views/common/login.jsp"; 
+		String url = "/common/login";
 		
-		request.getRequestDispatcher(url).forward(request, response);
+		ViewResolver.view(url, request, response);
 	}
 
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		String url = "/WEB-INF/views/common/login_success.jsp";
+		String url = "redirect:/common/main";
 		
 		String id = request.getParameter("id").trim();
 		String pwd = request.getParameter("pwd").trim();
@@ -34,18 +35,17 @@ public class Login extends HttpServlet {
 		try {
 			MemberVO member = service.getMember(id);
 			if(!(member != null && member.getPwd().equals(pwd))) {
-				url = "/WEB-INF/views/common/login_fail.jsp";
+				url = "/common/loginFail";
 				message = "아이디 또는 패스워드가 일치하지 않습니다.";
 			} else {
-				message = member.getName()+"님 환영합니다.";
+				request.getSession().setAttribute("loginUser", member);
 			}
 			request.setAttribute("message", message);
 		} catch (SQLException e) {
 			e.printStackTrace();
 		}
 		
-		
-		request.getRequestDispatcher(url).forward(request, response);
+		ViewResolver.view(url, request, response);
 	}
 
 }

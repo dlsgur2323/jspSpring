@@ -1,6 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 <%@ page trimDirectiveWhitespaces="true" %>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 
 <!DOCTYPE html>
 <html>
@@ -60,6 +61,15 @@
 		document.querySelector("form[action='login'] input[value='회원가입']").onclick=function(event){
 			location.href="<%=request.getContextPath()%>/common/regist";
 		}
+		
+		<c:if test="${!empty message }">
+		alert("${message }")
+		</c:if>
+		
 	</script>
-	
 </html>
+
+
+
+
+

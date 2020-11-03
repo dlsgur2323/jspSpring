@@ -12,20 +12,23 @@ import javax.servlet.http.HttpServletResponse;
 import com.jsp.dto.MemberVO;
 import com.jsp.service.MemberService;
 import com.jsp.service.MemberServiceImpl;
+import com.jsp.utils.ViewResolver;
 
 @WebServlet("/common/regist")
 public class Regist extends HttpServlet {
 	private static final long serialVersionUID = 1L;
        
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		String url = "/WEB-INF/views/common/registForm.jsp"; 
+		String url = "/common/registForm"; 
 		
-		request.getRequestDispatcher(url).forward(request, response);
+		ViewResolver.view(url, request, response);
 	}
 
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		String url = "/WEB-INF/views/common/regist_success.jsp";
+		String url = "/common/regist_success";
+		
 		request.setCharacterEncoding("utf-8");
+		
 		String id = request.getParameter("id");
 		String pwd = request.getParameter("pwd");
 		String name = request.getParameter("name");
@@ -52,7 +55,7 @@ public class Regist extends HttpServlet {
 				request.setAttribute("email", email);
 				request.setAttribute("phone", phone);
 			} else {
-				url = "/WEB-INF/views/common/regist_fail.jsp";
+				url = "/common/regist_fail.jsp";
 				message = "회원가입이 실패하였습니다.";
 			}
 			request.setAttribute("message", message);
@@ -60,7 +63,7 @@ public class Regist extends HttpServlet {
 			e.printStackTrace();
 		}
 		
-		request.getRequestDispatcher(url).forward(request, response);
+		ViewResolver.view(url, request, response);
 	}
 	
 }
