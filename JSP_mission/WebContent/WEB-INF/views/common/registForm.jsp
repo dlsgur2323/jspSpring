@@ -22,7 +22,7 @@
 			}
 			h1 {
 				margin : 0px;
-				margin-bottom : 20px;
+				margin-bottom : 50px;
 				padding-top : 20px;
 				padding-bottom : 20px;
 				text-align : center;
@@ -35,10 +35,10 @@
 				text-align : right;
 			}
 			#box {
-				margin-top : 30px;
+				margin-top : 60px;
 				border : 1px solid black;
 				width : 320px;
-				height : 550px;
+				height : 600px;
 				margin-left : auto;
 				margin-right : auto;
 			}

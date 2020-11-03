@@ -34,7 +34,7 @@ public class Login extends HttpServlet {
 		MemberService service = MemberServiceImpl.getInstance();
 		try {
 			MemberVO member = service.getMember(id);
-			if(!(member.getId() != null && member.getPwd().equals(pwd))) {
+			if(!(member != null && member.getPwd().equals(pwd))) {
 				url = "/common/loginFail";
 				message = "아이디 또는 패스워드가 일치하지 않습니다.";
 			} else {

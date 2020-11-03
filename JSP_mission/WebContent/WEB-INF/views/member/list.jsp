@@ -4,62 +4,66 @@
     pageEncoding="UTF-8"%>
 <%@ page trimDirectiveWhitespaces="true" %>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
-<!DOCTYPE html>
+
 <html>
-	<head>
-		<meta charset="UTF-8">
-		<title></title>
-		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-		<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
-		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+		
 		<style>
-			body {
-				background : #dbdbdb
+			#section {
+				background : white;
+				width : 1000px;
+				margin : auto;
+				clear : both;
 			}
-			h1{
+			#section h1{
 				margin-top : 50px;
 				text-align: center;
 				margin-bottom : 40px;
 			}
-			div {
-				background : white;
+			table{
+				width: 800px;
+				margin: auto;
+				border-collapse: collapse;
 			}
-			.box{
-				padding : 0px;
-				width: 900px;
-				margin : auto;
+			th{
+				background : black;
+				color : white;
+				font-size : 1.3em;
+				text-align: left;
+				height : 60px;
+				padding-left : 40px;
+				font-weight : normal;
 			}
-			.table{
-				width: 900px;
+			td{
+				height : 60px;
+				padding-left : 40px;
+				font-size : 1.3em;
+				border-bottom : 1px solid grey;
+			}
+			tr:hover {
+				background : #dbdbdb;
 			}
 		</style>
-	</head>
-	<body>
-		<h1>회원 정보 목록</h1>
-		<div class="box">
-			<table class="table">
-				<thead class="thead-dark">
-					<tr>
-						<th>아이디</th>
-						<th>패스워드</th>
-						<th>이름</th>
-						<th>이메일</th>
-						<th>전화번호</th>
-					</tr>
-				</thead>
-				<c:forEach var="member" items="${memberList }">
-					<tr>
-						<td>
-							<a href="detail?id=${member.id }">${member.id }</a>
-						</td>
-						<td>${member.pwd }</td>
-						<td>${member.name }</td>
-						<td>${member.email }</td>
-						<td>${member.phone }</td>
-					</tr>
-				</c:forEach>
-			</table>
-		</div>
-	</body>
+	<%@include file ="../common/header.jsp" %>
+		
+			<div id="section">
+				<h1>회원 정보 목록</h1>
+				<table>
+					<thead>
+						<tr>
+							<th>아이디</th>
+							<th>이름</th>
+							<th>이메일</th>
+						</tr>
+					</thead>
+					<c:forEach var="member" items="${memberList }">
+						<tr style="cursor:pointer;" onclick="location.href='detail?id=${member.id }'">
+							<td>${member.id }</td>
+							<td>${member.name }</td>
+							<td>${member.email }</td>
+						</tr>
+					</c:forEach>
+				</table>
+			</div>
+			
+	<%@include file ="../common/footer.jsp" %>
 </html>

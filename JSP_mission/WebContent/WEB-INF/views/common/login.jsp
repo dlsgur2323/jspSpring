@@ -23,7 +23,7 @@
 			}
 			h1 {
 				margin : 0px;
-				margin-bottom : 20px;
+				margin-bottom : 50px;
 				padding-top : 20px;
 				padding-bottom : 20px;
 				text-align : center;
@@ -48,10 +48,10 @@
 				margin-top : 15px;
 			}
 			#box {
-				margin-top : 30px;
+				margin-top : 60px;
 				border : 1px solid black;
 				width : 320px;
-				height : 380px;
+				height : 450px;
 				margin-left : auto;
 				margin-right : auto;
 			}
