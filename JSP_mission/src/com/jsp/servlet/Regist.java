@@ -55,7 +55,7 @@ public class Regist extends HttpServlet {
 				request.setAttribute("email", email);
 				request.setAttribute("phone", phone);
 			} else {
-				url = "/common/regist_fail.jsp";
+				url = "/common/regist_fail";
 				message = "회원가입이 실패하였습니다.";
 			}
 			request.setAttribute("message", message);

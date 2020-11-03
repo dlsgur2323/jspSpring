@@ -21,8 +21,7 @@ public class MemberServiceImpl implements MemberService {
 	
 	@Override
 	public MemberVO getMember(String id) throws SQLException {
-		MemberVO member = dao.getMember(id);
-		return member != null ? member : null;
+		return dao.getMember(id);
 	}
 
 	@Override

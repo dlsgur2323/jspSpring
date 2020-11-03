@@ -10,6 +10,12 @@
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
 		<style>
+			body {
+				background : #dbdbdb
+			}
+			div {
+				background : white;
+			}
 			form {
 				width : 251px;
 				margin : auto;
@@ -47,23 +53,23 @@
 			<form name="frm" action="regist" method="post" >
 				<div class="form-group">
 					<label for="id">아이디:</label>
-					<input type="text" class="form-control" id="id" name="id">
+					<input type="text" class="form-control" id="id" name="id" required>
 				</div>
 				<div class="form-group">
 					<label for="pwd">패스워드:</label>
-					<input type="password" class="form-control" id="pwd" name="pwd">
+					<input type="password" class="form-control" id="pwd" name="pwd" required>
 				</div>
 				<div class="form-group">
 					<label for="name">이름:</label>
-					<input type="text" class="form-control" id="name" name="name">
+					<input type="text" class="form-control" id="name" name="name" required>
 				</div>
 				<div class="form-group">
 					<label for="email">이메일:</label>
-					<input type="email" class="form-control" id="email" name="email">
+					<input type="email" class="form-control" id="email" name="email" required>
 				</div>
 				<div class="form-group">
 					<label for="phone">전화번호:</label>
-					<input type="tel" class="form-control" id="phone" name="phone">
+					<input type="tel" class="form-control" id="phone" name="phone" required>
 				</div>
 				<div id="div_btn">
 					<input type="button" class="btn btn-default" value="가입">&nbsp;&nbsp;&nbsp;
