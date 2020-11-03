@@ -5,20 +5,11 @@
 <!DOCTYPE html>
 <html>
 	
-	<style>
-		#section {
-			background : white;
-			width : 1000px;
-			margin : auto;
-			clear : both;
-			padding-bottom : 100px;
-		}
-	</style>
 		<%@include file ="header.jsp" %>
 	
 		<div id="section">
-			<h1>Main page...</h1>
-			<h1>Main page...</h1>
+			<h2>Main page...</h2>
+			<h2>Main page...</h2>
 	
 			
 		</div>

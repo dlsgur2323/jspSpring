@@ -24,43 +24,42 @@
 				width : 1000px;
 				margin : auto;
 				border-bottom : 2px solid black;
-				height : 120px;
+				height : 100px;
 			}
 			#header h1, #menu{
 				float : left;
 			}
 			#header h1{
-				margin-top : 40px;
-				font-size : 4em;
+				margin-top : 30px;
+				font-size : 3em;
 			}
 			#menu{
-				width : 700px;
+				width : 759px;
 				text-align : right;
 			}
 			#header #menu ul {
 				margin-top : 0px;
 				list-style-type: none;
-				font-size : 1.5em;
+				font-size : 1.2em;
 				height : 40px;
 			}
 			#header #menu ul li{
 				display : inline;		
 				padding : 10px;		
+				font-weight: bolder;
 			}
 			#user {
-				line-height : 6;
-				height : 80px;
+				line-height : 4;
+				height : 60px;
 				padding-right : 10px;
 			}
 			#user span{
-				vertical-align : sub;
-				font-size : 1.1em;
 			}
 			#page {
 				background : white;
 				width : 1100px;
 				margin : auto;
-				min-height : 90%;
+				min-height : 100%;
 			}
 			#logout_btn {
 				background : #dbdbdb;
@@ -68,8 +67,9 @@
 				border : none;
 				margin-left : 5px;
 				padding : 4px;
-				height : 24px;
-				width : 56px;
+				height : 26px;
+				width : 63px;
+				vertical-align: middle;
 			}
 			#logout_btn:hover {
 				background : black;
@@ -82,7 +82,13 @@
 			a:visited {
 				color : black;
 			}
-			
+			#section {
+			background : white;
+			width : 1000px;
+			margin : auto;
+			clear : both;
+			padding-bottom : 150px;
+			}
 		</style>
 	</head>
 	<body>

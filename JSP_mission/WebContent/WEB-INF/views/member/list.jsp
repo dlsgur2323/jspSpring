@@ -8,13 +8,7 @@
 <html>
 		
 		<style>
-			#section {
-				background : white;
-				width : 1000px;
-				margin : auto;
-				clear : both;
-			}
-			#section h1{
+			#section h2{
 				margin-top : 50px;
 				text-align: center;
 				margin-bottom : 40px;
@@ -27,16 +21,16 @@
 			th{
 				background : black;
 				color : white;
-				font-size : 1.3em;
+				font-size : 1.1em;
 				text-align: left;
-				height : 60px;
+				height : 40px;
 				padding-left : 40px;
 				font-weight : normal;
 			}
 			td{
-				height : 60px;
+				height : 40px;
 				padding-left : 40px;
-				font-size : 1.3em;
+				font-size : 1.1em;
 				border-bottom : 1px solid grey;
 			}
 			tr:hover {
@@ -46,7 +40,7 @@
 	<%@include file ="../common/header.jsp" %>
 		
 			<div id="section">
-				<h1>회원 정보 목록</h1>
+				<h2>회원 정보 목록</h2>
 				<table>
 					<thead>
 						<tr>
