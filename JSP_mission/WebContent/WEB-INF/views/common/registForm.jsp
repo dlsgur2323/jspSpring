@@ -80,12 +80,15 @@
 	</body>
 	<script>
 		document.querySelector("form[action='regist'] input[value='가입']").onclick=function(event){
-			var id = document.getElementById("id");
-			var pwd = document.getElementById("pwd");
-			if(id != null && id != "" && pwd != null && pwd != ""){
+			var id = document.querySelector("#id").value;
+			var pwd = document.querySelector("#pwd").value;
+			var name = document.querySelector("#name").value;
+			var email = document.querySelector("#email").value;
+			var phone = document.querySelector("#phone").value;
+			if(id.trim() != "" && pwd.trim() != "" && name.trim() != "" && email.trim() != "" && phone.trim() != ""){
 				document.frm.submit();
 			} else {
-				alert("아이디와 비밀번호를 반드시 입력 해야합니다.")
+				alert("입력하지 않은 정보가 있습니다.")
 			}
 		}
 		document.querySelector("form[action='regist'] input[value='취소']").onclick=function(event){

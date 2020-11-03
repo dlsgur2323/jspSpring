@@ -26,11 +26,13 @@
 			}
 			.cbody, img {
 				float : left;
+			    height: 246px;
 			}
 			.table {
 				border-bottom : 1px solid rgba(0,0,0,.125);
 				border-right : 1px solid rgba(0,0,0,.125);
 			   	width: 353px;
+			   	height : 246px;
 			}
 			div {
 				background : white;

@@ -25,11 +25,19 @@
 			div {
 				background : white;
 			}
+			.box{
+				padding : 0px;
+				width: 900px;
+				margin : auto;
+			}
+			.table{
+				width: 900px;
+			}
 		</style>
 	</head>
 	<body>
 		<h1>회원 정보 목록</h1>
-		<div class="container">
+		<div class="box">
 			<table class="table">
 				<thead class="thead-dark">
 					<tr>

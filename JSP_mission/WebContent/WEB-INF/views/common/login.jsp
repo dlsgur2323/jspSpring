@@ -81,7 +81,14 @@
 	</body>
 	<script>
 		document.querySelector("form[action='login'] input[value='로그인']").onclick=function(event){
-			document.frm.submit();
+			var id = document.querySelector("#id").value;
+			var pwd = document.querySelector("#pwd").value;
+			if(id.trim() != "" && pwd.trim() != ""){
+				document.frm.submit();
+			} else {
+				alert("아이디와 비밀번호를 모두 입력하세요.")
+			}
+			
 		}
 		document.querySelector("form[action='login'] input[value='회원가입']").onclick=function(event){
 			location.href="<%=request.getContextPath()%>/common/regist";
