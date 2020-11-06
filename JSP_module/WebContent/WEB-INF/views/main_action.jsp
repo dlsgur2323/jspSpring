@@ -4,9 +4,15 @@
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 
 
-<c:import url="/WEB-INF/views/include/header.jsp">
-	<c:param name="title">메인페이지</c:param>
-</c:import>
+<%-- <c:import url="/WEB-INF/views/include/header.jsp"> --%>
+<%-- 	<c:param name="title">메인페이지</c:param> --%>
+<%-- </c:import> --%>
+
+<jsp:include page="/WEB-INF/views/include/header.jsp">
+	<jsp:param value="메인페이지" name="title"/>
+</jsp:include>
+
+
   <!-- Content Wrapper. Contains page content -->
   <div class="content-wrapper">
     <!-- Content Header (Page header) -->
@@ -14,7 +20,7 @@
       <div class="container-fluid">
         <div class="row mb-2">
           <div class="col-sm-6">
-            <h1 class="m-0 text-dark">Starter Page</h1>
+            <h1 class="m-0 text-dark">Main Action Page</h1>
           </div><!-- /.col -->
           <div class="col-sm-6">
             <ol class="breadcrumb float-sm-right">
@@ -220,7 +226,7 @@
   </div>
   <!-- /.content-wrapper -->
 
-<c:import url="/WEB-INF/views/include/footer.jsp"></c:import>
+<jsp:include page="/WEB-INF/views/include/footer.jsp"></jsp:include>
 
 
 
