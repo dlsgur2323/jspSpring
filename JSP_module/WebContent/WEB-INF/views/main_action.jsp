@@ -1,3 +1,4 @@
+<%@page import="java.net.URLEncoder"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 <%@ page trimDirectiveWhitespaces="true" %>
@@ -9,7 +10,7 @@
 <%-- </c:import> --%>
 
 <jsp:include page="/WEB-INF/views/include/header.jsp">
-	<jsp:param value="메인페이지" name="title"/>
+	<jsp:param value="<%=URLEncoder.encode("메인페이지","utf-8") %>" name="title"/>
 </jsp:include>
 
 
