@@ -14,7 +14,15 @@ scratch. This page gets rid of all links and provides the needed markup only.
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta http-equiv="x-ua-compatible" content="ie=edge">
 
-  <title><%=URLEncoder.encode(request.getParameter("title"),"utf-8") %>${title }</title>
+  <title>
+	<c:if test="${empty param.title }">
+		${title }
+	</c:if>
+	<c:if test="${!empty param.title }">
+		<%=URLEncoder.encode(request.getParameter("title"),"utf-8") %>
+	</c:if>
+	
+  </title>
 
   <!-- Font Awesome Icons -->
   <link rel="stylesheet" href="<%=request.getContextPath()%>/resources/bootstrap/plugins/fontawesome-free/css/all.min.css">
