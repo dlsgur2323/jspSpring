@@ -3,5 +3,5 @@
 <%@ page trimDirectiveWhitespaces="true"%>
 
 <script>
-	location.href="common/login";
+	location.href="common/loginForm.do";
 </script>

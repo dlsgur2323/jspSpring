@@ -28,7 +28,7 @@ public class MemberDAOImpl implements MemberDAO{
 		
 		List<MemberVO> memberList = null;
 		
-		memberList = session.selectList("Member-Mapper.selectMemberList", cri, rowBounds);
+		memberList = session.selectList("Member-Mapper.selectSearchMemberList", cri, rowBounds);
 		
 		session.close();
 		return memberList;
@@ -39,7 +39,7 @@ public class MemberDAOImpl implements MemberDAO{
 		int count = 0;
 		SqlSession session = sqlSessionFactory.openSession();
 		
-		count = session.selectOne("Member-Mapper.selectMemberListCount", cri);
+		count = session.selectOne("Member-Mapper.selectSearchMemberListCount", cri);
 		
 		session.close();
 		return count;

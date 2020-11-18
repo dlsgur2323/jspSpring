@@ -2,6 +2,7 @@ package com.jsp.service;
 
 import java.sql.SQLException;
 import java.util.List;
+import java.util.Map;
 
 import javax.servlet.http.HttpSession;
 
@@ -15,6 +16,8 @@ public interface MemberService {
 	
 	List<MemberVO> getMemberList(SearchCriteria cri) throws SQLException;
 	
+	Map<String, Object> getSearchMemberList(SearchCriteria cri) throws SQLException;
+	
 	MemberVO getMember(String id) throws SQLException;
 	
 	void regist(MemberVO member) throws SQLException;
@@ -26,4 +29,7 @@ public interface MemberService {
 	void disabled(String id) throws SQLException;
 	
 	void enabled(String id) throws SQLException;
+	
+	
+	
 }

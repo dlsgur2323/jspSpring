@@ -2,7 +2,6 @@
     <wb-module deploy-name="JSP_myboard">
         <wb-resource deploy-path="/" source-path="/WebContent" tag="defaultRootSource"/>
         <wb-resource deploy-path="/WEB-INF/classes" source-path="/src"/>
-        <wb-resource deploy-path="/WEB-INF/classes" source-path="/res"/>
         <property name="context-root" value="JSP_myboard"/>
         <property name="java-output-path" value="/JSP_myboard/build/classes"/>
     </wb-module>
