@@ -19,7 +19,6 @@ import javax.servlet.http.HttpSession;
 
 import com.jsp.dto.MemberVO;
 
-@WebFilter("/LoginCheckFilter")
 public class LoginCheckFilter implements Filter {
 
 	public void destroy() {
